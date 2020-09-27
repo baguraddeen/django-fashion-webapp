@@ -1,0 +1,13 @@
+{% extends 'base.html'%}
+{% load static %}
+
+
+
+{% block content%}
+
+<h3>This is the result of your search</h3>
+{% for post in queryset %}
+    <a href="{% url 'core:product_detail' post.id %}">{{ post.title }}</a>
+{% endfor %}
+ 
+{% endblock %}
